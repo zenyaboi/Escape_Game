@@ -7,6 +7,7 @@ public class PauseGame : MonoBehaviour
     public GameObject menu;
     public GameObject resume;
     public GameObject quit;
+    public GameObject optionsScreen;
     public bool on;
     public bool off;
 
@@ -42,6 +43,16 @@ public class PauseGame : MonoBehaviour
         off = true;
         on = false;
 
+    }
+
+    public void OpenOptions() 
+    {
+        optionsScreen.SetActive(true);
+    }
+
+    public void CloseOptions() 
+    {
+        optionsScreen.SetActive(false);
     }
 
     public void Exit()
