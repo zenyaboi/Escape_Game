@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        
+        UnlockMouse();
     }
 
     void Update()
@@ -37,5 +37,16 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quitting");
+    }
+    
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

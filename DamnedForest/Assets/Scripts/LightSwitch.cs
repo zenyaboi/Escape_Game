@@ -8,6 +8,8 @@ public class LightSwitch : MonoBehaviour
     public GameObject offOB;
     public GameObject lightsText;
     public GameObject lightOB;
+    public GameObject lightOB2;
+    public GameObject lightOB3;
     public AudioSource switchClick;
     public bool lightsAreOn;
     public bool lightsAreOff;
@@ -21,6 +23,8 @@ public class LightSwitch : MonoBehaviour
         onOB.SetActive(false);
         offOB.SetActive(true);
         lightOB.SetActive(false);
+        lightOB2.SetActive(false);
+        lightOB3.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -46,6 +50,8 @@ public class LightSwitch : MonoBehaviour
         if (lightsAreOn && inReach && Input.GetButtonDown("Interact"))
         {
             lightOB.SetActive(false);
+            lightOB2.SetActive(false);
+            lightOB3.SetActive(false);
             onOB.SetActive(false);
             offOB.SetActive(true);
             switchClick.Play();
@@ -55,6 +61,8 @@ public class LightSwitch : MonoBehaviour
         else if (lightsAreOff && inReach && Input.GetButtonDown("Interact"))
         {
             lightOB.SetActive(true);
+            lightOB2.SetActive(true);
+            lightOB3.SetActive(true);
             onOB.SetActive(true);
             offOB.SetActive(false);
             switchClick.Play();
