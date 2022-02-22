@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public string gameLevel;
     public GameObject optionsScreen;
+    public GameObject controlsScreen;
 
     void Start()
     {
@@ -21,6 +22,16 @@ public class MainMenu : MonoBehaviour
     public void StartGame() 
     {
         SceneManager.LoadScene(gameLevel);
+    }
+
+    public void OpenControls()
+    {
+        controlsScreen.SetActive(true);
+    }
+
+    public void CloseControls()
+    {
+        controlsScreen.SetActive(false);
     }
 
     public void OpenOptions() 
